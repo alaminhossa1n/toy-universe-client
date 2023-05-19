@@ -169,9 +169,9 @@ const AddToy = () => {
                             rows="4"
                         ></textarea>
                     </div>
-                </div>
 
-                <button type="submit" className="px-4 py-2 font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-500">
+                </div>
+                <button type="submit" className="w-full bg-[#37306B] hover:bg-[#2b2555] text-white font-bold py-2 px-4 rounded">
                     Submit
                 </button>
             </form>
