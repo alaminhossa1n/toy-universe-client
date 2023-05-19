@@ -3,9 +3,12 @@ import NavBar from "./Shared/NavBar";
 
 const Main = () => {
     return (
-        <div className="container mx-auto">
+        <div>
             <NavBar></NavBar>
-            <Outlet></Outlet>
+            <div className="container mx-auto">
+                <Outlet></Outlet>
+            </div>
+            
         </div>
     );
 };

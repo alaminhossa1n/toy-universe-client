@@ -1,7 +1,7 @@
 
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ToyCard from './ToyCard';
 
 const Home = () => {
@@ -33,6 +33,10 @@ const Home = () => {
                 setSelectedToys(data);
             })
     }
+
+    useEffect(() => {
+        handleActionFigures('Action Figures');
+    }, [])
 
     return (
 
