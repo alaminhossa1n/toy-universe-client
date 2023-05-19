@@ -11,7 +11,7 @@ const AllToysRow = ({ toy, i }) => {
             <th>{price}</th>
             <th>{quantity}</th>
             <th>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button className="bg-[#37306B] hover:bg-[#2b2555] text-white font-bold py-2 px-4 rounded">
                     View Details
                 </button>
             </th>

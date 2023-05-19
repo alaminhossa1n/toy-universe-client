@@ -53,7 +53,7 @@ const NavBar = () => {
 
                 <div className='ms-3'>
                     {
-                        user ? <button onClick={handleLogout} className='btn border-none'>Sign Out</button> : <Link to='/login'><button className='btn border-none'>Login</button></Link>
+                        user ? <button onClick={handleLogout} className='bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'>Sign Out</button> : <Link to='/login'><button className='bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'>Login</button></Link>
                     }
                 </div>
             </div>

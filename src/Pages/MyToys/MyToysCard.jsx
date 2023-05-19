@@ -1,4 +1,4 @@
-
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 const MyToysCard = ({ toy, i }) => {
     const { quantity, subCategory, name, sellerName, price } = toy
     return (
@@ -10,9 +10,10 @@ const MyToysCard = ({ toy, i }) => {
             <th>{price}</th>
             <th>{quantity}</th>
             <th>
-                <button className="bg-[#2CD3E1] hover:bg-[#AEE2FF] text-white font-bold py-2 px-4 rounded">
-                    View Details
-                </button>
+                <div className="space-y-5">
+                    <p className="h-8 w-8 text-yellow-600 p-2 text-2xl"><FaEdit /></p>
+                    <p className="h-8 w-8 text-red-600 p-2 text-2xl"><FaTrashAlt /></p>
+                </div>
             </th>
         </tr>
     );
