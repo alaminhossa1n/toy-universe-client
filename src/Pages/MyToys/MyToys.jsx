@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import MyToysCard from "./MyToysCard";
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -7,19 +8,34 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        fetch(`https://toy-universe-server.vercel.app/toys?email=${user?.email}`)
+        fetch(`http://localhost:5000/toys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
 
     return (
-        <div>
-            {
-                toys.map(toy => <h3
-
-                    key={toy._id}>{user?.displayName}</h3>)
-            }
-        </div>
+        <table className="table w-full bg-white border border-gray-300">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Seller</th>
+                    <th>Toy Name</th>
+                    <th>Sub-category</th>
+                    <th>Price</th>
+                    <th>Available Quantity</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    toys.map((toy, i) => <MyToysCard
+                        key={toy._id}
+                        i={i + 1}
+                        toy={toy}
+                    ></MyToysCard>)
+                }
+            </tbody>
+        </table>
     );
 };
 

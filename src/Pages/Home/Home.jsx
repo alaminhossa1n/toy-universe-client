@@ -8,7 +8,7 @@ const Home = () => {
     const [selectedToys, setSelectedToys] = useState([]);
 
     const handleActionFigures = (props) => {
-        const url = `https://toy-universe-server.vercel.app/toys?category=${props}`
+        const url = `http://localhost:5000/toys?category=${props}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -17,7 +17,7 @@ const Home = () => {
     }
 
     const handlePlushToys = (props) => {
-        const url = `https://toy-universe-server.vercel.app/toys?category=${props}`
+        const url = `http://localhost:5000/toys?category=${props}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -25,7 +25,7 @@ const Home = () => {
             })
     }
     const handleGamesAndPuzzles = (props) => {
-        const url = `https://toy-universe-server.vercel.app/toys?category=${props}`
+        const url = `http://localhost:5000/toys?category=${props}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -50,7 +50,7 @@ const Home = () => {
             </TabList>
 
             <TabPanel>
-                <div className="p-6 grid grid-cols-3">
+                <div className="p-6 grid grid-cols-3 gap-5">
                     {
                         selectedToys.map(toy => <ToyCard
                             key={toy._id}
@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className="p-6">
+                <div className="p-6 grid grid-cols-3 gap-5">
                     {
                         selectedToys.map(toy => <ToyCard
                             key={toy._id}
@@ -70,7 +70,7 @@ const Home = () => {
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className="p-6">
+                <div className="p-6 grid grid-cols-3 gap-5">
                     {
                         selectedToys.map(toy => <ToyCard
                             key={toy._id}
