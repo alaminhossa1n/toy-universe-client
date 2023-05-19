@@ -3,6 +3,7 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useEffect, useState } from 'react';
 import ToyCard from './ToyCard';
+import Banner from './Banner';
 
 const Home = () => {
 
@@ -40,7 +41,8 @@ const Home = () => {
 
     return (
 
-        <div>
+        <div className=''>
+            <Banner></Banner>
             <Tabs>
                 <TabList className="flex border-b border-gray-200 justify-center gap-10">
                     <Tab onClick={() => handleActionFigures('Action Figures')} className="rounded py-2 px-4 text-sm font-medium text-gray-500 hover:text-indigo-500 focus:outline-none focus:bg-yellow-500">

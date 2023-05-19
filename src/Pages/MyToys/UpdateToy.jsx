@@ -20,50 +20,52 @@ const UpdateToy = () => {
 
 
     return (
-        <form className="max-w-md mx-auto p-4 shadow-md mt-20" onSubmit={handleSubmit}>
-            <div className="mb-4">
-                <label htmlFor="price" className="block text-gray-700 font-bold mb-2">
-                    Price
-                </label>
-                <input
-                    type="text"
-                    id="price"
-                    defaultValue={price}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter price"
-                />
-            </div>
-            <div className="mb-4">
-                <label htmlFor="quantity" className="block text-gray-700 font-bold mb-2">
-                    Available Quantity
-                </label>
-                <input
-                    type="text"
-                    id="quantity"
-                    defaultValue={quantity}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter available quantity"
-                />
-            </div>
-            <div className="mb-4">
-                <label htmlFor="description" className="block text-gray-700 font-bold mb-2">
-                    Detail Description
-                </label>
-                <textarea
-                    id="description"
-                    defaultValue={description}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter detail description"
-                ></textarea>
-            </div>
-            <button
-                type="submit"
-                className="bg-[#37306B] hover:bg-[#2b2555] text-white font-bold py-2 px-4 rounded"
-            >
-                Update
-            </button>
+        <div className="py-32 bg-[#C4DFDF]">
+            <form className="max-w-md mx-auto p-10 shadow-md bg-[#F5F0BB] rounded" onSubmit={handleSubmit}>
+                <div className="mb-4">
+                    <label htmlFor="price" className="block text-gray-700 font-bold mb-2">
+                        Price
+                    </label>
+                    <input
+                        type="text"
+                        id="price"
+                        defaultValue={price}
+                        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter price"
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="quantity" className="block text-gray-700 font-bold mb-2">
+                        Available Quantity
+                    </label>
+                    <input
+                        type="text"
+                        id="quantity"
+                        defaultValue={quantity}
+                        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter available quantity"
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="description" className="block text-gray-700 font-bold mb-2">
+                        Detail Description
+                    </label>
+                    <textarea
+                        id="description"
+                        defaultValue={description}
+                        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter detail description"
+                    ></textarea>
+                </div>
+                <button
+                    type="submit"
+                    className="bg-[#37306B] hover:bg-[#2b2555] text-white font-bold py-2 px-4 rounded"
+                >
+                    Update
+                </button>
 
-        </form>
+            </form>
+        </div>
     );
 };
 

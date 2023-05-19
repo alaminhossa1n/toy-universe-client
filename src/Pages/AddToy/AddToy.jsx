@@ -33,9 +33,9 @@ const AddToy = () => {
     };
 
     return (
-        <div className=" bg-gray-100 p-10">
-            <form onSubmit={handleSubmit} className="w-1/2 mx-auto">
-                <div className="md:grid grid-cols-2 gap-10 p-6 bg-white rounded-md shadow-md">
+        <div className=" bg-[#C4DFDF] p-10">
+            <form onSubmit={handleSubmit} className="w-1/2 mx-auto bg-[#F5F0BB] rounded">
+                <div className="md:grid grid-cols-2 gap-10 p-6 rounded-md shadow-md">
                     <div className="mb-4">
                         <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
                             Name

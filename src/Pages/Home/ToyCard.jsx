@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ToyCard = ({ toy }) => {
     const { name, pictureUrl, price, rating, _id } = toy
     return (
-        <div className="max-w-xs rounded overflow-hidden shadow-lg bg-white">
+        <div className="max-w-xs rounded overflow-hidden shadow-lg bg-[#C4DFDF]">
             <img src={pictureUrl} alt={name} className="w-full h-60 object-cover hover:scale-125 transition-all duration-500 cursor-pointer" />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2 text-green-600">{name}</div>

@@ -35,7 +35,7 @@ const MyToys = () => {
 
     return (
         <div>
-            <table className="table w-full bg-white border border-gray-300">
+            <table className="table w-full border border-gray-300">
                 <thead>
                     <tr>
                         <th></th>
