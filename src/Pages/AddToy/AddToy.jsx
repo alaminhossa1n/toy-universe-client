@@ -43,6 +43,7 @@ const AddToy = () => {
                         <input
                             type="text"
                             id="name"
+                            placeholder="Enter Toy Name"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -54,6 +55,7 @@ const AddToy = () => {
                         <input
                             type="url"
                             id="pictureUrl"
+                            placeholder="Enter Picture URL"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -65,6 +67,7 @@ const AddToy = () => {
                         <input
                             type="text"
                             id="sellerName"
+                            placeholder="Enter Seller Name"
                             defaultValue={user?.displayName}
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200 bg-gray-100"
                         />
@@ -76,6 +79,7 @@ const AddToy = () => {
                         <input
                             type="email"
                             id="sellerEmail"
+                            placeholder="Enter Seller Email"
                             defaultValue={user?.email}
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                         />
@@ -131,6 +135,7 @@ const AddToy = () => {
                         <input
                             type="number"
                             id="price"
+                            placeholder="Enter Price"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -143,6 +148,7 @@ const AddToy = () => {
                         <input
                             type="number"
                             id="rating"
+                            placeholder="Enter Toy Rating"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                         />
                     </div>
@@ -154,6 +160,7 @@ const AddToy = () => {
                         <input
                             type="number"
                             id="quantity"
+                            placeholder="Enter Available Quantity"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -165,6 +172,7 @@ const AddToy = () => {
                         </label>
                         <textarea
                             id="description"
+                            placeholder="Describe Toy Details"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             rows="4"
                         ></textarea>

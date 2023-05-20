@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateToy = () => {
     const loadedData = useLoaderData();
-    const { price, quantity, description } = loadedData
+    const { price, quantity, description, _id } = loadedData
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -11,8 +11,19 @@ const UpdateToy = () => {
         const quantity = e.target.elements.quantity.value;
         const description = e.target.elements.description.value;
 
-        // Perform form submission logic here
-        // e.g., send data to backend, perform validation, etc.
+        const updatedData = { price, quantity, description }
+
+        fetch(`http://localhost:5000/toys/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
 
         // Clear form fields after submission
         e.target.reset();
@@ -22,6 +33,7 @@ const UpdateToy = () => {
     return (
         <div className="py-32 bg-[#C4DFDF]">
             <form className="max-w-md mx-auto p-10 shadow-md bg-[#F5F0BB] rounded" onSubmit={handleSubmit}>
+            <h2 className="text-2xl font-medium text-center mb-6">Update Toy</h2>
                 <div className="mb-4">
                     <label htmlFor="price" className="block text-gray-700 font-bold mb-2">
                         Price

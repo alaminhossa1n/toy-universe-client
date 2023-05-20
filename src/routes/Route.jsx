@@ -10,11 +10,13 @@ import PrivetRouts from "./PrivetRouts";
 import UpdateToy from "../Pages/MyToys/UpdateToy";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import Blog from "../Pages/Blog";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',

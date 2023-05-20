@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
     const { createUser, profileUpdate } = useContext(AuthContext)
@@ -49,6 +49,7 @@ const SignUp = () => {
                         <input
                             type="text"
                             name="name"
+                            placeholder="Enter Your Name"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -60,6 +61,7 @@ const SignUp = () => {
                         <input
                             type="ulr"
                             name="photoUrl"
+                            placeholder="Enter Your Photo URL"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -71,6 +73,7 @@ const SignUp = () => {
                         <input
                             type="email"
                             name="email"
+                            placeholder="Enter Your Email"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -83,6 +86,7 @@ const SignUp = () => {
                         <input
                             type="password"
                             name="password"
+                            placeholder="Enter Your Password"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
                             required
                         />
@@ -95,6 +99,9 @@ const SignUp = () => {
                         Sign Up
                     </button>
                 </form>
+                <div className="mt-6 text-center">
+                    <p>Have an account? <span className="text-blue-400"><Link to='/login'>Login Now!</Link></span></p>
+                </div>
             </div>
         </div>
     );
