@@ -14,12 +14,13 @@ const NavBar = () => {
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/all-toys'>All Toys</Link></li>
-        <li><Link to='/my-toys'>My Toys</Link></li>
-        <li><Link to='/add-toy'>Add A Toy</Link></li>
+        {
+            user && <li><Link to='/my-toys'>My Toys</Link></li>
+        }
+        {
+            user && <li><Link to='/add-toy'>Add A Toy</Link></li>
+        }
         <li><Link to='/blog'>Blog</Link></li>
-        {/* {
-            user && <li><Link to='/bookings'>My Bookings</Link></li>
-        } */}
     </>
 
 
