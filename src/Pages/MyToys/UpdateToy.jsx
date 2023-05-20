@@ -1,5 +1,6 @@
-import { toast } from "react-hot-toast";
+
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateToy = () => {
     const loadedData = useLoaderData();
@@ -22,8 +23,12 @@ const UpdateToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.acknowledged){
-                    toast.success('Updated Successfully!')
+                if (data.acknowledged) {
+                    Swal.fire({
+                        title: 'Updated',
+                        icon: 'success',
+                        confirmButtonText: 'Okay'
+                    })
                 }
             })
 
@@ -35,7 +40,7 @@ const UpdateToy = () => {
     return (
         <div className="py-32 bg-[#C4DFDF]">
             <form className="max-w-md mx-auto p-10 shadow-md bg-[#F5F0BB] rounded" onSubmit={handleSubmit}>
-            <h2 className="text-2xl font-medium text-center mb-6">Update Toy</h2>
+                <h2 className="text-2xl font-medium text-center mb-6">Update Toy</h2>
                 <div className="mb-4">
                     <label htmlFor="price" className="block text-gray-700 font-bold mb-2">
                         Price
