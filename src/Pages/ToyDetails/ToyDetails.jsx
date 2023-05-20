@@ -10,10 +10,10 @@ const ToyDetails = () => {
     return (
         <div className="p-12">
             <div className="md:flex justify-center gap-10 items-center">
-                <div className="md:w-1/2">
+                <div className="md:w-1/2"  data-aos="fade-right">
                     <img className="mx-auto rounded" src={pictureUrl} alt="" />
                 </div>
-                <div className="md:w-1/2 shadow-lg rounded p-5">
+                <div className="md:w-1/2 shadow-lg rounded p-5" data-aos="fade-left">
                     <h2 className="text-6xl font-semibold">{name}</h2>
                     <div className='flex gap-1 items-center mt-2'>
                         <Rating
