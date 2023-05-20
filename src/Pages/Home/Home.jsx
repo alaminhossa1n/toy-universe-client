@@ -4,8 +4,10 @@ import 'react-tabs/style/react-tabs.css';
 import { useEffect, useState } from 'react';
 import ToyCard from './ToyCard';
 import Banner from './Banner';
+import useTitle from '../../hooks/TitleHooks';
 
 const Home = () => {
+    useTitle('Toy - Home')
 
     const [selectedToys, setSelectedToys] = useState([]);
 

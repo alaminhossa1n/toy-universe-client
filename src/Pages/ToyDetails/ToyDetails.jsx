@@ -1,11 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import useTitle from "../../hooks/TitleHooks";
 
 const ToyDetails = () => {
+    useTitle('Toy - Details')
     const loadedData = useLoaderData();
     const { description, quantity, rating, price, sellerName, sellerEmail, name, pictureUrl } = loadedData;
-
     return (
         <div className="p-12">
             <div className="md:flex justify-center gap-10 items-center">
