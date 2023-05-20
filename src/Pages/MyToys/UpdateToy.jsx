@@ -1,3 +1,4 @@
+import { toast } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 
 const UpdateToy = () => {
@@ -6,7 +7,6 @@ const UpdateToy = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         const price = e.target.elements.price.value;
         const quantity = e.target.elements.quantity.value;
         const description = e.target.elements.description.value;
@@ -22,7 +22,9 @@ const UpdateToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if(data.acknowledged){
+                    toast.success('Updated Successfully!')
+                }
             })
 
         // Clear form fields after submission

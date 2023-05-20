@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const form = e.target;
         const pictureUrl = e.target.elements.pictureUrl.value;
         const name = e.target.elements.name.value;
         const sellerName = e.target.elements.sellerName.value;
@@ -27,7 +29,10 @@ const AddToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.acknowledged) {
+                    toast.success('Successfully Added')
+                    form.reset();
+                }
             })
 
     };

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const SignUp = () => {
     const { createUser, profileUpdate } = useContext(AuthContext)
@@ -19,6 +20,7 @@ const SignUp = () => {
             .then(result => {
                 e.target.reset()
                 const createdUser = result.user;
+                toast.success('Success!')
                 navigate('/');
 
                 profileUpdate(createdUser, {
@@ -40,6 +42,7 @@ const SignUp = () => {
         <div className="min-h-screen flex items-center justify-center bg-[#C4DFDF]">
             <div className="max-w-md w-full p-6 bg-[#F5F0BB] rounded-md shadow-md">
                 <h2 className="text-2xl font-medium text-center mb-6">Sign Up</h2>
+                <p className="text-red-600">{error}</p>
 
                 <form onSubmit={handleSignUp}>
                     <div className="mb-4">

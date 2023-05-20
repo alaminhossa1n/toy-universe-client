@@ -2,6 +2,7 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
     const location = useLocation();
@@ -21,10 +22,12 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 form.reset();
+                toast.success('Login Successfully!')
                 navigate(from, { replace: true })
 
             })
             .catch(error => {
+                toast.error('Try Again')
                 setError('Invalid Email OR Password');
             })
 
@@ -37,7 +40,7 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                toast.success('Login Successfully!')
                 navigate(from, { replace: true });
             })
             .catch(error => {
@@ -50,6 +53,7 @@ const Login = () => {
         <div className="min-h-screen flex items-center justify-center bg-[#C4DFDF]">
             <div className="max-w-md w-full p-6 rounded-md shadow-md bg-[#F5F0BB]">
                 <h2 className="text-2xl font-medium text-center mb-6">Log In</h2>
+                <p className="text-red-600">{error}</p>
 
                 <form onSubmit={handleEmailLogin}>
                     <div className="mb-4">
