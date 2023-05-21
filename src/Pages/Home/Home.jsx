@@ -17,7 +17,7 @@ const Home = () => {
     const [selectedToys, setSelectedToys] = useState([]);
 
     const handleActionFigures = (props) => {
-        const url = `http://localhost:5000/toys?category=${props}`
+        const url = `https://toy-universe-server.vercel.app/toys?category=${props}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -26,7 +26,7 @@ const Home = () => {
     }
 
     const handlePlushToys = (props) => {
-        const url = `http://localhost:5000/toys?category=${props}`
+        const url = `https://toy-universe-server.vercel.app/toys?category=${props}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -34,7 +34,7 @@ const Home = () => {
             })
     }
     const handleGamesAndPuzzles = (props) => {
-        const url = `http://localhost:5000/toys?category=${props}`
+        const url = `https://toy-universe-server.vercel.app/toys?category=${props}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
