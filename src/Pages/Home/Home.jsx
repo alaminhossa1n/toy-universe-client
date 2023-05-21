@@ -161,6 +161,43 @@ const Home = () => {
                     </TabPanel>
                 </Tabs>
             </section>
+
+            {/* user review */}
+
+            <section className="bg-gradient-to-b from-cyan-200 via-blue-900 to-amber-100 py-12 my-12">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold mb-6 text-white">Customer Reviews</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="bg-white rounded-lg p-6">
+                            <div className="flex items-center mb-4">
+                                <img src="path/to/avatar1.jpg" alt="User Avatar" className="w-10 h-10 rounded-full mr-4" />
+                                <h3 className="text-lg font-bold">John Doe</h3>
+                            </div>
+                            <p className="text-gray-700 mb-4">Great product! Highly recommended.</p>
+                            <p className="text-gray-700">Rating: 4.5/5</p>
+                        </div>
+                        <div className="bg-white rounded-lg p-6">
+                            <div className="flex items-center mb-4">
+                                <img src="path/to/avatar2.jpg" alt="User Avatar" className="w-10 h-10 rounded-full mr-4" />
+                                <h3 className="text-lg font-bold">Jane Smith</h3>
+                            </div>
+                            <p className="text-gray-700 mb-4">Excellent customer service. Will buy again.</p>
+                            <p className="text-gray-700">Rating: 4.8/5</p>
+                        </div>
+                        <div className="bg-white rounded-lg p-6">
+                            <div className="flex items-center mb-4">
+                                <img src="path/to/avatar3.jpg" alt="User Avatar" className="w-10 h-10 rounded-full mr-4" />
+                                <h3 className="text-lg font-bold">Sarah Johnson</h3>
+                            </div>
+                            <p className="text-gray-700 mb-4">Quality products at affordable prices.</p>
+                            <p className="text-gray-700">Rating: 4.2/5</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
         </div>
     );
 };

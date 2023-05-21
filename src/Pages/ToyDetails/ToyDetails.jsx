@@ -14,7 +14,7 @@ const ToyDetails = () => {
                     <img className="mx-auto rounded" src={pictureUrl} alt="" />
                 </div>
                 <div className="md:w-1/2 shadow-lg rounded p-5" data-aos="fade-left">
-                    <h2 className="text-6xl font-semibold">{name}</h2>
+                    <h2 className="text-5xl font-semibold mb-4">{name}</h2>
                     <div className='flex gap-1 items-center mt-2'>
                         <Rating
                             style={{ maxWidth: 100 }}
@@ -23,7 +23,7 @@ const ToyDetails = () => {
                             value={rating}
                         />
                     </div>
-                    <p className="text-3xl font-bold">$ {price}</p>
+                    <p className="text-3xl font-bold my-2">$ {price}</p>
                     <p className="text-lg font-semibold"><span className="text-red-600">In Stock:</span> <span className="text-green-600">{quantity}</span></p>
                     <p className="mt-4">{description}</p>
                     <div className="mt-10">

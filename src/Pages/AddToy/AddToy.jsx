@@ -140,7 +140,7 @@ const AddToy = () => {
                             Price
                         </label>
                         <input
-                            type="number"
+                            type="text"
                             id="price"
                             placeholder="Enter Price"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
@@ -153,7 +153,7 @@ const AddToy = () => {
                             Rating
                         </label>
                         <input
-                            type="number"
+                            type="text"
                             id="rating"
                             placeholder="Enter Toy Rating"
                             className="w-full px-3 py-2 placeholder-gray-400 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
