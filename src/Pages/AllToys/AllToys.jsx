@@ -8,14 +8,14 @@ const AllToys = () => {
     const [warning, setWarning] = useState(null);
 
     useEffect(() => {
-        fetch('https://toy-universe-server.vercel.app/toys?limit=20')
+        fetch('http://localhost:5000/toys?limit=20')
             .then(res => res.json())
             .then(data => SetToys(data))
     }, [])
     // ...............search.............
     const handleSearch = (e) => {
         const searchValue = e.target.value;
-        fetch(`https://toy-universe-server.vercel.app/toys?search=${searchValue}`)
+        fetch(`http://localhost:5000/toys?search=${searchValue}`)
             .then(res => res.json())
             .then(data => {
                 SetToys(data);

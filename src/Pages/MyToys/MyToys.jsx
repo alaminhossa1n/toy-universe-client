@@ -11,7 +11,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch(`https://toy-universe-server.vercel.app/toys?email=${user?.email}`)
+        fetch(`http://localhost:5000/toys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
@@ -34,7 +34,7 @@ const MyToys = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://toy-universe-server.vercel.app/toys/${id}`, {
+                fetch(`http://localhost:5000/toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -62,12 +62,12 @@ const MyToys = () => {
 
     // ..............sorting
     const handleLowPriceBtn = () => {
-        fetch(`https://toy-universe-server.vercel.app/toys?sort=asc`)
+        fetch(`http://localhost:5000/toys?sort=asc`)
             .then(res => res.json())
             .then(data => setToys(data))
     }
     const handleHighPriceBtn = () => {
-        fetch(`https://toy-universe-server.vercel.app/toys?sort=desc`)
+        fetch(`http://localhost:5000/toys?sort=desc`)
             .then(res => res.json())
             .then(data => setToys(data))
     }

@@ -22,7 +22,7 @@ const AddToy = () => {
         const description = e.target.elements.description.value;
         const addedToy = { pictureUrl, name, sellerEmail, sellerName, category, subCategory, price, rating, quantity, description }
 
-        fetch('https://toy-universe-server.vercel.app/add-toy', {
+        fetch('http://localhost:5000/add-toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
