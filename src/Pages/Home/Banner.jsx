@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="bg-[#C4DFDF]">
+        <div className="bg-gradient-to-r from-cyan-200 via-indigo-500 to-cyan-200">
             <div className="md:flex items-center p-10">
                 <div className="md:w-1/2 space-y-6">
                     <h1 className="text-6xl font-bold text-[#37306B]">Toy Universe</h1>

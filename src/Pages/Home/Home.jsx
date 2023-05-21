@@ -6,6 +6,7 @@ import ToyCard from './ToyCard';
 import Banner from './Banner';
 import useTitle from '../../hooks/TitleHooks';
 import { useLoaderData } from 'react-router-dom';
+import { FaCheckCircle, FaCreditCard, FaShoppingCart } from 'react-icons/fa';
 
 const Home = () => {
     useTitle('Toy - Home');
@@ -59,12 +60,53 @@ const Home = () => {
 
                     {
                         galleryImg.map(img => <img
-                        className='shadow rounded-lg'
+                            className='shadow rounded-lg'
                             key={img._id}
                             src={img.pictureUrl}
 
                         />)
                     }
+                </div>
+            </section>
+
+            {/* How to Buy */}
+
+            <section className="bg-gradient-to-r from-cyan-200 via-indigo-900 to-cyan-200 py-12 my-12">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold mb-6 text-white text-center">How to Buy</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="bg-white p-6 rounded-lg shadow-md">
+                            <FaShoppingCart className="text-4xl text-cyan-600 mb-4" />
+                            <h3 className="text-lg font-semibold mb-4 text-gray-800">Step 1: Browse the Collection</h3>
+                            <p className="text-gray-700">
+                                Explore our wide range of toys and browse through different categories to find the perfect ones for you.
+                            </p>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md">
+                            <FaShoppingCart className="text-4xl text-cyan-600 mb-4" />
+                            <h3 className="text-lg font-semibold mb-4 text-gray-800">Step 2: Add to Cart</h3>
+                            <p className="text-gray-700">
+                                Once you've found the toys you want to purchase, simply click the "Add to Cart" button to add them to your
+                                shopping cart.
+                            </p>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md">
+                            <FaCreditCard className="text-4xl text-cyan-600 mb-4" />
+                            <h3 className="text-lg font-semibold mb-4 text-gray-800">Step 3: Proceed to Checkout</h3>
+                            <p className="text-gray-700">
+                                When you're ready to complete your purchase, click on the "Checkout" button and follow the prompts to provide
+                                your shipping and payment details.
+                            </p>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow-md">
+                            <FaCheckCircle className="text-4xl text-cyan-600 mb-4" />
+                            <h3 className="text-lg font-semibold mb-4 text-gray-800">Step 4: Confirm and Place Order</h3>
+                            <p className="text-gray-700">
+                                Review your order details, including the items, quantities, and total price. Once you're satisfied, click the
+                                "Place Order" button to finalize your purchase.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
