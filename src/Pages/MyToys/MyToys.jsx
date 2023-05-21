@@ -16,6 +16,8 @@ const MyToys = () => {
             .then(data => setToys(data))
     }, [])
 
+
+
     // delete items
 
     const handleDelete = (id) => {
@@ -57,8 +59,26 @@ const MyToys = () => {
 
     }
 
+
+    // ..............sorting
+    const handleLowPriceBtn = () => {
+        fetch(`http://localhost:5000/toys?sort=asc`)
+            .then(res => res.json())
+            .then(data => setToys(data))
+    }
+    const handleHighPriceBtn = () => {
+        fetch(`http://localhost:5000/toys?sort=desc`)
+            .then(res => res.json())
+            .then(data => setToys(data))
+    }
+    // ..............sorting
+
     return (
-        <div>
+        <div className="py-5">
+            <div className="flex justify-center gap-10 p-5">
+                <button onClick={(handleLowPriceBtn)} className="btn">Low Price</button>
+                <button onClick={handleHighPriceBtn} className="btn">High Price</button>
+            </div>
             <table className="table w-full border border-gray-300">
                 <thead>
                     <tr>

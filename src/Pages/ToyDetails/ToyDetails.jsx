@@ -23,8 +23,8 @@ const ToyDetails = () => {
                             value={rating}
                         />
                     </div>
-                    <p className="text-2xl font-bold">$ {price}</p>
-                    <p>In Stock: {quantity}</p>
+                    <p className="text-3xl font-bold">$ {price}</p>
+                    <p className="text-lg font-semibold"><span className="text-red-600">In Stock:</span> <span className="text-green-600">{quantity}</span></p>
                     <p className="mt-4">{description}</p>
                     <div className="mt-10">
                         <p className="font-bold">Seller Details:</p>

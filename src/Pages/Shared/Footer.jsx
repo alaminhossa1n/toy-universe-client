@@ -9,6 +9,9 @@ const Footer = () => {
                     Toy Universe <br />Providing reliable tech since 202
                 </p>
                 <p>Copyright © 2023 - All right reserved</p>
+                <p>Address: 123 Main Street, City, Country</p>
+                <p>Number: +1234567890</p>
+                <p>Email: info@example.com</p>
             </div>
             <div>
                 <div className="grid grid-flow-col gap-4">

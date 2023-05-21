@@ -1,9 +1,10 @@
 
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useTitle from "../../hooks/TitleHooks";
 
 const UpdateToy = () => {
+    const navigate = useNavigate()
     useTitle('Toy - Update')
     const loadedData = useLoaderData();
     const { price, quantity, description, _id } = loadedData
@@ -26,6 +27,7 @@ const UpdateToy = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
+                    navigate('/my-toys')
                     Swal.fire({
                         title: 'Updated',
                         icon: 'success',
