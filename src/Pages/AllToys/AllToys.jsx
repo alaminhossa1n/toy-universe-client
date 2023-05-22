@@ -8,14 +8,14 @@ const AllToys = () => {
     const [warning, setWarning] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys?limit=20')
+        fetch('https://al-amin-production.up.railway.app/toys?limit=20')
             .then(res => res.json())
             .then(data => SetToys(data))
     }, [])
     // ...............search.............
     const handleSearch = (e) => {
         const searchValue = e.target.value;
-        fetch(`http://localhost:5000/toys?search=${searchValue}`)
+        fetch(`https://al-amin-production.up.railway.app/toys?search=${searchValue}`)
             .then(res => res.json())
             .then(data => {
                 SetToys(data);

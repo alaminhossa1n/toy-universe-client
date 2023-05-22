@@ -22,7 +22,7 @@ const AddToy = () => {
         const description = e.target.elements.description.value;
         const addedToy = { pictureUrl, name, sellerEmail, sellerName, category, subCategory, price, rating, quantity, description }
 
-        fetch('http://localhost:5000/add-toy', {
+        fetch('https://al-amin-production.up.railway.app/add-toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
