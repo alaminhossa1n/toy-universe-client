@@ -8,14 +8,14 @@ const AllToys = () => {
     const [warning, setWarning] = useState(null);
 
     useEffect(() => {
-        fetch('https://al-amin-production.up.railway.app/toys?limit=20')
+        fetch('https://toy-universe-server.vercel.app/toys?limit=20')
             .then(res => res.json())
             .then(data => SetToys(data))
     }, [])
     // ...............search.............
     const handleSearch = (e) => {
         const searchValue = e.target.value;
-        fetch(`https://al-amin-production.up.railway.app/toys?search=${searchValue}`)
+        fetch(`https://toy-universe-server.vercel.app/toys?search=${searchValue}`)
             .then(res => res.json())
             .then(data => {
                 SetToys(data);

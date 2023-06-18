@@ -11,7 +11,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch(`https://al-amin-production.up.railway.app/toys?email=${user?.email}`)
+        fetch(`https://toy-universe-server.vercel.app/toys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
@@ -34,7 +34,7 @@ const MyToys = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://al-amin-production.up.railway.app/toys/${id}`, {
+                fetch(`https://toy-universe-server.vercel.app/toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -62,12 +62,12 @@ const MyToys = () => {
 
     // ..............sorting
     const handleLowPriceBtn = () => {
-        fetch(`https://al-amin-production.up.railway.app/toys?sort=asc`)
+        fetch(`https://toy-universe-server.vercel.app/toys?sort=asc`)
             .then(res => res.json())
             .then(data => setToys(data))
     }
     const handleHighPriceBtn = () => {
-        fetch(`https://al-amin-production.up.railway.app/toys?sort=desc`)
+        fetch(`https://toy-universe-server.vercel.app/toys?sort=desc`)
             .then(res => res.json())
             .then(data => setToys(data))
     }
